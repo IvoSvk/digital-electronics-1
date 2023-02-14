@@ -38,4 +38,5 @@ end architecture dataflow;
 
 2. Link to your public EDA Playground example:
 
-   [Distributive laws](https://edaplayground.com/x/ey63)                      [De Morgan's laws](https://edaplayground.com/x/nwM2)
+   [Distributive laws](https://edaplayground.com/x/ey63)   
+   [De Morgan's laws](https://edaplayground.com/x/nwM2)
