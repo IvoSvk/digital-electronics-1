@@ -1,6 +1,6 @@
 # Lab 2: Ivan Lipták
 
-### 2-bit comparator.
+### 2-bit comparator
 
 1. Karnaugh maps for other two functions of 2-bit comparator:
 
@@ -29,8 +29,8 @@
         report "Stimulus process started" severity note;
 
         -- First test case
-        s_b <= "BCD_OF_YOUR_SECOND_LAST_ID_DIGIT"; -- Such as "0101" if ID = xxxx56
-        s_a <= "BCD_OF_YOUR_LAST_ID_DIGIT";        -- Such as "0110" if ID = xxxx56
+        s_b <= "0100"; -- Such as "0101" if ID = xxxx56
+        s_a <= "0010";        -- Such as "0110" if ID = xxxx56
         wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = 'WRITE_CORRECT_VALUE_HERE') and
