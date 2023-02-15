@@ -1,6 +1,6 @@
 # Lab 2: Ivan Lipták
 
-### 2-bit comparator
+### 2-bit comparator.
 
 1. Karnaugh maps for other two functions of 2-bit comparator:
 
