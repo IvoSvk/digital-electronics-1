@@ -39,13 +39,7 @@
         -- If true, then do not report anything
         report "Input combination b=0100, a=0010 FAILED" severity error;
 
-
-
-
-
-
-
-        -- second test case ...
+ -- second test case ...
         s_b <= "0000"; s_a <= "0001"; wait for 100 ns;
         -- ... and its expected outputs
         assert ((s_B_greater_A = '0') and
@@ -107,7 +101,7 @@
 
 end architecture testbench;
 
-    
+
 ```
 
 2. Link to your public EDA Playground example:
