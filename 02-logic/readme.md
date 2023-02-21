@@ -106,7 +106,6 @@ end architecture testbench;
 
 2. Link to your public EDA Playground example:
 
-   [https://www.edaplayground.com/...](https://www.edaplayground.com/...)
+   [4-bit binary comparator](https://www.edaplayground.com/x/JYzr)
 
 
-aaaaa
