@@ -23,26 +23,91 @@
    Last two digits of my student ID: **xxxx42**
 
 ```vhdl
-    p_stimulus : process
+     p_stimulus : process
     begin
         -- Report a note at the beginning of stimulus process
-        report "Stimulus process started" severity note;
+        report "Stimulus process started";
 
-        -- First test case
-        s_b <= "0100"; -- Such as "0101" if ID = xxxx56
-        s_a <= "0010";        -- Such as "0110" if ID = xxxx56
-        wait for 100 ns;
-        -- Expected output
-        assert ((s_B_greater_A = 'WRITE_CORRECT_VALUE_HERE') and
-                (s_B_equals_A  = 'WRITE_CORRECT_VALUE_HERE') and
-                (s_B_less_A    = 'WRITE_CORRECT_VALUE_HERE'))
+
+ -- first test case (My id number) ...
+        s_b <= "0100"; s_a <= "0010"; wait for 100 ns;
+        -- ... and its expected outputs
+        assert ((s_B_greater_A = '1') and
+                (s_B_equals_A  = '0') and
+                (s_B_less_A    = '0'))
         -- If false, then report an error
-        report "Input combination COMPLETE_THIS_TEXT FAILED" severity error;
+        -- If true, then do not report anything
+        report "Input combination b=0100, a=0010 FAILED" severity error;
+
+
+
+
+
+
+
+        -- second test case ...
+        s_b <= "0000"; s_a <= "0001"; wait for 100 ns;
+        -- ... and its expected outputs
+        assert ((s_B_greater_A = '0') and
+                (s_B_equals_A  = '0') and
+                (s_B_less_A    = '1'))
+        -- If false, then report an error
+        -- If true, then do not report anything
+        report "Input combination b=0000, a=0001 FAILED" severity error;
+        
+
+        
+        -- third test case ...
+        s_b <= "1100"; s_a <= "1111"; wait for 100 ns;
+        -- ... and its expected outputs
+        assert ((s_B_greater_A = '0') and
+                (s_B_equals_A  = '0') and
+                (s_B_less_A    = '1'))
+        -- If false, then report an error
+        -- If true, then do not report anything
+        report "Input combination b=1100, a=1111 FAILED" severity error;
+        
+                -- 4th test case ...
+        s_b <= "0000"; s_a <= "0000"; wait for 100 ns;
+        -- ... and its expected outputs
+        assert ((s_B_greater_A = '0') and
+                (s_B_equals_A  = '1') and
+                (s_B_less_A    = '0'))
+        -- If false, then report an error
+        -- If true, then do not report anything
+        report "Input combination b=0000, a=0000 FAILED" severity error;
+       
+        
+         -- 5th test case ...
+        s_b <= "0100"; s_a <= "0100"; wait for 100 ns;
+        -- ... and its expected outputs
+        assert ((s_B_greater_A = '0') and
+                (s_B_equals_A  = '1') and
+                (s_B_less_A    = '0'))
+        -- If false, then report an error
+        -- If true, then do not report anything
+        report "Input combination b=0100, a=0100 FAILED" severity error;
+        
+ -- 6th test case ...
+        s_b <= "0010"; s_a <= "0100"; wait for 100 ns;
+        -- ... and its expected outputs
+        assert ((s_B_greater_A = '0') and
+                (s_B_equals_A  = '1') and
+                (s_B_less_A    = '0'))
+        -- If false, then report an error
+        -- If true, then do not report anything
+        report "Input combination b=0010, a=0100 FAILED" severity error;
+        
+
 
         -- Report a note at the end of stimulus process
-        report "Stimulus process finished" severity note;
-        wait;
+        report "Stimulus process finished";
+        wait; -- Data generation process is suspended forever
     end process p_stimulus;
+
+end architecture testbench;
+
+    
 ```
 
 2. Link to your public EDA Playground example:
