@@ -10,7 +10,7 @@
 
    Less than:
 
-   ![K-maps](https://github.com/IvoSvk/digital-electronics-1/blob/ef4ba808c797e59d272ec2aff71e4ba3462700de/images/BlA.png)
+   ![K-maps](https://github.com/IvoSvk/digital-electronics-1/blob/c193bd8ebdbf77f58d3dd3d389120dd2a65e6b78/images/BlA.png)
 
 2. Mark the largest possible implicants in the K-map and according to them, write the equations of simplified SoP (Sum of the Products) form of the "greater than" function and simplified PoS (Product of the Sums) form of the "less than" function.
 
