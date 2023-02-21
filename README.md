@@ -6,6 +6,7 @@
 ## [02-logic](02-logic/readme.md)
 
 
+## [03-vivado](03-vivado/readme.md)
 
 
 
